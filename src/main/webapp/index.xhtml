@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:pm="http://primefaces.org/mobile"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <ui:composition template="template.xhtml">
+        <ui:define name="conteudo">
+                 <pm:field>
+                        <p:outputLabel for="nome" value="Nome:" />
+                        <p:inputText value="#{cadastroManagedBean.cadastro.nome}" id="nome" />
+                    </pm:field>
+                     
+                    <pm:field>
+                        <p:outputLabel for="cidade" value="Cidade:" />
+                        <p:selectOneRadio value="#{cadastroManagedBean.cadastro.cidade}" id="cidade">
+                            <f:selectItem itemLabel="Patos de Minas" itemValue="Patos de Minas" />
+                            <f:selectItem itemLabel="Lagoa Formosa" itemValue="Lagoa Formosa" />
+                        </p:selectOneRadio>
+                    </pm:field>
+ 
+                    <p:commandButton value="Salvar" styleClass="ui-btn-inline"
+                                     update="@form"
+                                     actionListener="#{cadastroManagedBean.salvar()}"
+                                     icon="ui-icon-check"/>
+        </ui:define>
+        
+    </ui:composition>
+    
+    
+</html>

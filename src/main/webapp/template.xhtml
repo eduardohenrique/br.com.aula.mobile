@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pm="http://primefaces.org/mobile">
+    
+    <f:view renderKitId="PRIMEFACES_MOBILE" />
+    
+    <h:head>
+        <title>Loja de carros</title >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </h:head >
+
+    <h:body >
+       
+
+        <pm:page swatch="a">
+            <pm:header title="Meu Cadastro"></pm:header>
+            
+            <pm:content>
+                
+                 <h:form>
+                    <p:growl />
+                    <p:tabMenu>
+                        <p:menuitem value="Home" outcome="index" icon="ui-icon-home" iconPos="top"/>
+                        <p:menuitem value="Consulta" outcome="tabela" icon="ui-icon-search"  iconPos="top"/>
+                    </p:tabMenu>
+                   
+                    <ui:insert  name="conteudo"/>
+                    
+                 </h:form>
+                
+            </pm:content>
+        </pm:page>
+       
+        
+    </h:body>
+</html>
